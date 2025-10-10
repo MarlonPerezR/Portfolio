@@ -1,0 +1,480 @@
+/* -----------------------------------
+   RESET BÁSICO
+----------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #0d0d0d; /* Fondo oscuro */
+  color: #fff;
+  line-height: 1.6;
+}
+
+p {
+  font-size: 1.1rem; /* o 1.1rem si prefieres */
+  line-height: 1.6; 
+  color: #ccc; /* si quieres tono uniforme */
+}
+/* -----------------------------------
+   HEADER Y NAVEGACIÓN
+----------------------------------- */
+header {
+  background: #0d0d0d;
+  padding: 20px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.logo span {
+  color: #00aaff; /* Azul eléctrico */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+/* -----------------------------------
+   Boton volver arriba
+----------------------------------- */
+
+/* Botón volver arriba */
+#btnUp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #00aaff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
+  z-index: 1000;
+}
+
+/* SVG dentro del botón */
+#btnUp svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover con efecto sutil */
+#btnUp:hover svg {
+  transform: translateY(-3px);
+}
+
+#btnUp:hover {
+  background: #0088cc;
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.8);
+}
+
+/* Estado visible */
+#btnUp.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* -----------------------------------
+   HERO
+----------------------------------- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 250px;
+  flex-wrap: wrap;
+  gap: 35px
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h2 span {
+  color: #00aaff;
+}
+
+.hero-text p {
+  margin: 20px 0;
+}
+.hero-img{
+   margin-right: 25px;
+}
+
+@media (max-width: 1024px) {
+  .hero-img {
+    margin-right: 0; /* para móviles sigue centrado */
+    margin-bottom: 20px;
+  }
+}
+.hero-card {
+  background: #0d0d0d;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 170, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 35px rgba(0, 170, 255, 0.6);
+}
+
+.hero-card img {
+  width: 400px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  image-rendering: auto; 
+}
+
+/* -----------------------------------
+   BOTONES
+----------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f6f6f6;
+  color: #0d0d0d;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00aaff;
+  color: #fff;
+}
+
+/* -----------------------------------
+   SECCIONES GENERALES
+----------------------------------- */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2,
+.section-header {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #00aaff;
+  text-align: center;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  color: #00aaff;
+}
+
+/* -----------------------------------
+   ABOUT
+----------------------------------- */
+.about p {
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ccc;
+  padding-bottom: 30px;
+}
+
+/* -----------------------------------
+   SKILLS SLIDER
+----------------------------------- */
+.skills {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.skills-slider {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 900px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(20, 20, 20, 0.9);
+  box-shadow: 0 0 20px #00aaff66;
+  margin-bottom: 60px; /* Separación con el texto */
+}
+
+.slider-track {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.slider-track i,
+.slider-track .custom-icon {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.custom-icon {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00aaff;
+}
+
+/* Animación de scroll */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Efecto desvanecimiento en bordes */
+.skills-slider::before,
+.skills-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.skills-slider::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(20,20,20,0.9) 0%, transparent 100%);
+}
+
+.skills-slider::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(20,20,20,0.9) 0%, transparent 100%);
+}
+
+/* Descripción del carrusel */
+.skills-description {
+  margin-top: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.skills-description p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+
+
+/* -----------------------------------
+   SKILLS SECTION (Bloques organizados)
+----------------------------------- */
+.skills-section {
+  background: #0d0d0d;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.3rem;
+  color: #00aaff;
+  margin-bottom: 50px;
+  text-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-block {
+  flex: 1 1 400px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 170, 255, 0.3);
+}
+
+.skills-block h3 {
+  color: #00aaff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 170, 255, 0.3);
+  padding-bottom: 10px;
+}
+
+.skills-block ul {
+  list-style: none;
+  padding-left: 0;
+  color: #ddd;
+}
+
+.skills-block li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 20px;
+}
+
+.skills-block li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #00aaff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Adaptación móvil */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-block {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+
+/* -----------------------------------
+   PROYECTOS
+----------------------------------- */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  position: relative;
+}
+
+.projects h2 {
+  width: 100%;
+  text-align: center;
+  color: #00aaff;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.project-card {
+  background: #1a1a1a;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px #00aaff66;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.project-card .btn {
+  margin-top: 20px; /* separa el botón del texto */
+  display: inline-block;
+}
+
+/* -----------------------------------
+   CONTACTO
+----------------------------------- */
+.contact p {
+  margin-bottom: 20px;
+}
+
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
+footer {
+  background: #000;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* -----------------------------------
+   RESPONSIVO
+----------------------------------- */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-card img {
+    width: 250px;
+    height: auto;
+  }
+}

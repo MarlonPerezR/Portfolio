@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Marlon Pérez</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Íconos de tecnologías -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<button id="btnUp" title="Volver arriba">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="11" stroke="white" stroke-opacity="0.4" fill="none"/>
+    <path d="M8 14l4-4 4 4" />
+  </svg>
+</button>
+
+<script>
+  // Mostrar / ocultar el botón al hacer scroll
+  window.addEventListener("scroll", () => {
+    const btn = document.getElementById("btnUp");
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+
+  // Scroll suave hacia el inicio
+  document.getElementById("btnUp").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Mostrar botón si se hace click en cualquier sección del menú
+  document.querySelectorAll("a[href^='#']").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("btnUp").classList.add("show");
+    });
+  });
+</script>
+
+<body>
+  <!-- Navegación -->
+  <header>
+    <nav>
+      <h1 class="logo">Marlon<span>Dev</span></h1>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-img">
+      <div class="hero-card">
+        <img src="./assets/Foto personal.png" alt="Foto de perfil">
+      </div>
+    </div>
+    <div class="hero-text">
+      <h2>Hola, soy <span>Marlon Pérez</span></h2>
+      <p>
+        Estudiante de Ingeniería de Software con enfoque en desarrollo web. Me interesa crear soluciones prácticas y bien estructuradas, y estoy listo para aprender rápido, asumir nuevos retos y aportar en un equipo profesional.
+      </p>
+      <a href="#projects" class="btn">Ver mis proyectos</a>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="about" class="about">
+    <h2>Sobre mí</h2>
+    <p>
+     Actualmente curso sexto semestre de Ingeniería de Software en la Universidad Manuela Beltrán. Desde que inicié mi carrera descubrí la pasión por crear aplicaciones web y de escritorio que resuelvan problemas reales. Hoy en día me enfoco en fortalecer mis habilidades como desarrollador, aplicando buenas prácticas de programación, trabajando con APIs y explorando herramientas de calidad de código. Tengo experiencia con tecnologías como Java con Spring Boot, React, HTML, CSS, JavaScript, Bootstrap, PHP y bases de datos como MySQL y PostgreSQL, además de conocimientos básicos en Python. Mi motivación es seguir aprendiendo y crecer profesionalmente dentro de un equipo de desarrollo.
+    </p>
+  </section>
+
+<section id="projects" class="projects">
+  <h2>Proyectos</h2>
+
+  <div class="project-card">
+    <img src="prueba.jpg" alt="Proyecto 2">
+    <h3>Dashboard personal</h3>
+    <p>Dashboard en desarrollo con React, Firebase y Bootstrap. Incluye login y módulos de gestión.</p>
+    <a href="#" class="btn">Ver proyecto</a>
+  </div>
+
+  <div class="project-card">
+    <img src="proyecto1.jpg" alt="Proyecto 1">
+    <h3>Sistema de gestión de parqueadero</h3>
+    <p>Aplicación web desarrollada con HTML, CSS, JavaScript y PHP con base de datos en MySQL.</p>
+    <a href="#" class="btn">Ver proyecto</a>
+  </div>
+
+  <div class="project-card">
+    <img src="proyecto1.jpg" alt="Proyecto 1">
+    <h3>Sistema de gestión de parqueadero</h3>
+    <p>Aplicación web desarrollada con HTML, CSS, JavaScript y PHP con base de datos en MySQL.</p>
+    <a href="#" class="btn">Ver proyecto</a>
+  </div>
+
+  <div class="project-card">
+    <img src="proyecto1.jpg" alt="Proyecto 1">
+    <h3>Sistema de gestión de parqueadero</h3>
+    <p>Aplicación web desarrollada con HTML, CSS, JavaScript y PHP con base de datos en MySQL.</p>
+    <a href="#" class="btn">Ver proyecto</a>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <div class="skills-slider">
+    <div class="slider-track">
+      <!-- Lenguajes y frameworks principales -->
+      <i class="devicon-java-plain-wordmark colored"></i>
+      <i class="devicon-spring-plain-wordmark colored"></i>
+      <i class="devicon-react-original-wordmark colored"></i>
+      <i class="devicon-html5-plain-wordmark colored"></i>
+      <i class="devicon-css3-plain-wordmark colored"></i>
+      <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-bootstrap-plain-wordmark colored"></i>
+      <i class="devicon-php-plain colored"></i>
+      <i class="devicon-mysql-plain-wordmark colored"></i>
+
+      <!-- Otros principales -->
+      <i class="devicon-python-plain-wordmark colored"></i>
+      <i class="devicon-eslint-original colored"></i>
+      <span class="custom-icon">SonarQube</span>
+
+      <!-- Duplicados para loop infinito -->
+      <i class="devicon-java-plain-wordmark colored"></i>
+      <i class="devicon-spring-plain-wordmark colored"></i>
+      <i class="devicon-react-original-wordmark colored"></i>
+      <i class="devicon-html5-plain-wordmark colored"></i>
+      <i class="devicon-css3-plain-wordmark colored"></i>
+      <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-bootstrap-plain-wordmark colored"></i>
+      <i class="devicon-php-plain colored"></i>
+      <i class="devicon-mysql-plain-wordmark colored"></i>
+      <i class="devicon-python-plain-wordmark colored"></i>
+      <i class="devicon-eslint-original colored"></i>
+      <span class="custom-icon">SonarQube</span>
+    </div>
+  </div>
+
+ <section id="skills" class="skills-description">
+
+  <div class="skills-container">
+    <!-- Bloque izquierdo -->
+    <div class="skills-block">
+      <h3>Lenguajes y Tecnologías</h3>
+      <ul>
+        <li><strong>Java & Spring Boot</strong> — desarrollo backend sólido y estructurado</li>
+        <li><strong>React</strong> — interfaces dinámicas y modernas</li>
+        <li><strong>JavaScript, HTML5 y CSS3</strong> — desarrollo web completo</li>
+        <li><strong>PHP & SQL</strong> — integración de sistemas y bases de datos</li>
+        <li><strong>Buenas prácticas</strong> con <strong>ESLint</strong> y <strong>SonarQube</strong></li>
+      </ul>
+    </div>
+
+    <!-- Bloque derecho -->
+    <div class="skills-block">
+      <h3>Herramientas y Metodologías</h3>
+      <ul>
+        <li><strong>Entornos:</strong> VS Code, NetBeans, XAMPP, MySQL Workbench</li>
+        <li><strong>Sistemas operativos:</strong> Windows, Linux básico</li>
+        <li><strong>Virtualización y redes:</strong> VirtualBox, VMware, PNetLab</li>
+        <li><strong>Control de versiones:</strong> Git y GitHub</li>
+        <li><strong>Gestión de proyectos:</strong> Scrum, Extreme Programming, Jira</li>
+        <li><strong>Ofimática:</strong> Suite Microsoft Office</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contacto -->
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <p><strong>¿Te interesa trabajar conmigo? Escríbeme:</strong></p>
+    <p>perezmarlon.dev@gmail.com</p>
+    <form action="mailto:perezmarlon.dev@gmail.com" method="post" enctype="text/plain"></form>
+    <a href="mailto:perezmarlon.dev@gmail.com" class="btn">Enviar correo</a>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Marlon Pérez - Desarrollador en formación</p>
+  </footer>
+</body>
+
+</html>
+
+
