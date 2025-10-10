@@ -462,19 +462,294 @@ footer {
 /* -----------------------------------
    RESPONSIVO
 ----------------------------------- */
+/* -----------------------------------
+   MEDIA QUERIES - RESPONSIVO
+----------------------------------- */
+
+/* Tablets y pantallas medianas */
 @media (max-width: 1024px) {
   .hero {
+    padding: 40px 60px;
+    gap: 30px;
+  }
+  
+  .hero-card img {
+    width: 350px;
+    height: 400px;
+  }
+  
+  .skills-slider {
+    width: 90%;
+    height: 100px;
+  }
+  
+  .slider-track i,
+  .slider-track .custom-icon {
+    font-size: 3.2rem;
+  }
+  
+  .custom-icon {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  
+  .logo {
+    font-size: 28px;
+  }
+  
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .hero {
+    padding: 30px 20px;
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
   }
-
+  
   .hero-text {
     max-width: 100%;
+    order: 2;
   }
-
+  
+  .hero-img {
+    margin-right: 0;
+    order: 1;
+  }
+  
   .hero-card img {
-    width: 250px;
-    height: auto;
+    width: 280px;
+    height: 320px;
+  }
+  
+  .skills-slider {
+    height: 80px;
+    margin-bottom: 40px;
+  }
+  
+  .slider-track {
+    gap: 40px;
+  }
+  
+  .slider-track i,
+  .slider-track .custom-icon {
+    font-size: 2.8rem;
+  }
+  
+  .custom-icon {
+    font-size: 1.6rem;
+  }
+  
+  .skills-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .skills-block {
+    flex: 1 1 100%;
+  }
+  
+  section {
+    padding: 40px 15px;
+  }
+  
+  section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Móviles grandes */
+@media (max-width: 480px) {
+  header {
+    padding: 12px 15px;
+  }
+  
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links li {
+    margin: 5px 0;
+  }
+  
+  .hero {
+    padding: 20px 15px;
+  }
+  
+  .hero-card {
+    padding: 15px;
+  }
+  
+  .hero-card img {
+    width: 220px;
+    height: 260px;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    margin: 15px 0;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .skills-slider {
+    height: 60px;
+    width: 95%;
+    margin-bottom: 30px;
+  }
+  
+  .slider-track {
+    gap: 30px;
+  }
+  
+  .slider-track i,
+  .slider-track .custom-icon {
+    font-size: 2.2rem;
+  }
+  
+  .custom-icon {
+    font-size: 1.3rem;
+  }
+  
+  .skills-block {
+    padding: 20px;
+  }
+  
+  .skills-block h3 {
+    font-size: 1.3rem;
+  }
+  
+  .skills-block li {
+    font-size: 0.95rem;
+  }
+  
+  .project-card {
+    margin: 15px 10px;
+    max-width: 100%;
+  }
+  
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Botón flotante más pequeño en móviles */
+  #btnUp {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  #btnUp svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  /* Efectos de desvanecimiento más suaves en móviles */
+  .skills-slider::before,
+  .skills-slider::after {
+    width: 50px;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+  .hero-card img {
+    width: 200px;
+    height: 240px;
+  }
+  
+  .nav-links {
+    gap: 12px;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    font-size: 22px;
+  }
+  
+  .skills-slider {
+    height: 50px;
+  }
+  
+  .slider-track i,
+  .slider-track .custom-icon {
+    font-size: 1.8rem;
+  }
+  
+  .custom-icon {
+    font-size: 1.1rem;
+  }
+}
+
+/* Ajustes para landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    padding: 20px;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .hero-card img {
+    width: 180px;
+    height: 200px;
+  }
+  
+  .hero-text {
+    max-width: 60%;
+  }
+  
+  section {
+    padding: 30px 15px;
+  }
+}
+
+/* Mejoras de rendimiento para animaciones en móviles */
+@media (max-width: 768px) {
+  .slider-track {
+    animation: scroll 20s linear infinite;
+  }
+  
+  .hero-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skills-block:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* Soporte para pantallas de alta densidad */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-card img {
+    image-rendering: -webkit-optimize-contrast;
   }
 }
