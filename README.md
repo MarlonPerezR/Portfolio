@@ -1,6 +1,6 @@
 # Portfolio Personal - Marlon Pérez
 
-![Portfolio Preview](./assets/Foto%20personal.png)
+<img src="./assets/Foto%20personal.png" alt="Portfolio Preview" width="600" height="400" />
 
 ## 📋 Descripción
 
