@@ -1,35 +1,35 @@
-# Portfolio Personal - Marlon Pérez
+# Personal Portfolio - Marlon Pérez
 
 <img src="./assets/Foto%20personal.png" alt="Portfolio Preview" width="400" height="600" />
 
-## 📋 Descripción
+## 📋 Description
 
-Portfolio personal desarrollado con HTML, CSS y JavaScript. Este sitio web muestra mis habilidades, proyectos y experiencia como desarrollador en formación.
+Personal portfolio developed with HTML, CSS, and JavaScript. This website showcases my skills, projects, and experience as a developer in training.
 
-## ✨ Características
+## ✨ Features
 
-- **Diseño responsive** - Se adapta a diferentes dispositivos
-- **Navegación suave** - Scroll suave entre secciones
-- **Slider de tecnologías** - Carrusel dinamico de skills
-- **Botón flotante** - Para volver al inicio fácilmente
-- **Interfaz moderna** - Diseño limpio y agradable a la vista
+- **Responsive design** - Adapts to different devices
+- **Smooth navigation** - Smooth scrolling between sections
+- **Technology slider** - Dynamic skills carousel
+- **Floating button** - Easy return to top
+- **Modern interface** - Clean and visually appealing design
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
 ### Frontend
-- **HTML5** - Estructura semántica
-- **CSS3** - Estilos y diseño responsive
-- **JavaScript** - Interactividad y funcionalidades
-- **Bootstrap** - Framework CSS (referenciado)
+- **HTML5** - Semantic structure
+- **CSS3** - Styles and responsive design
+- **JavaScript** - Interactivity and functionalities
+- **Bootstrap** - CSS framework (referenced)
 
-### Herramientas de Calidad
-- **ESLint** - Análisis de código
-- **SonarQube** - Calidad del código
+### Quality Tools
+- **ESLint** - Code analysis
+- **SonarQube** - Code quality
 
-### Otras Tecnologías
-- **Git & GitHub** - Control de versiones
+### Other Technologies
+- **Git & GitHub** - Version control
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 PORTFOLIO-MARLON/
 │
 ├── assets/
@@ -42,43 +42,43 @@ PORTFOLIO-MARLON/
 ├── README.md
 └── .gitignore
 
-## 🚀 Secciones del Portfolio
 
-1. **Header/Navegación** - Menú de navegación con enlaces suaves
-2. **Hero** - Presentación personal con foto y descripción
-3. **Sobre Mí** - Información académica y profesional
-4. **Proyectos** - Galería de proyectos desarrollados
-5. **Skills** - 
-   - Carrusel de tecnologías
-   - Descripción detallada de habilidades
-6. **Contacto** - Información de contacto y formulario
-7. **Footer** - Información de derechos
+## 🚀 Portfolio Sections
 
-## 🎯 Funcionalidades Principales
+1. **Header/Navigation** - Navigation menu with smooth links
+2. **Hero** - Personal presentation with photo and description
+3. **About Me** - Academic and professional information
+4. **Projects** - Gallery of developed projects
+5. **Skills** - Technology carousel and detailed skills description
+6. **Contact** - Contact information and form
+7. **Footer** - Copyright information
 
-### Navegación
-- Menú responsive con enlaces a todas las secciones
-- Scroll suave al hacer clic en los enlaces
+## 🎯 Main Features
 
-### Botón Flotante
-- Botón "Volver arriba" que aparece al hacer scroll
-- Animación suave al hacer clic
+### Navigation
+- Responsive menu with links to all sections
+- Smooth scroll when clicking on links
 
-### Carrusel de Skills
-- Animación infinita de tecnologías
-- Iconos de Devicon para representar cada tecnología
+### Floating Button
+- "Back to top" button that appears when scrolling
+- Smooth animation when clicked
 
-## 📧 Contacto
+### Skills Carousel
+- Infinite technology animation
+- Devicon icons to represent each technology
+
+## 📧 Contact
 
 **Email:** perezmarlon.dev@gmail.com
 
-## 👨‍💻 Sobre el Desarrollador
+## 👨‍💻 About the Developer
 
-**Marlon Pérez** - Estudiante de Ingeniería de Software en la Universidad Manuela Beltrán. Desarrollador en formación con interés en crear soluciones prácticas y bien estructuradas. Enfocado en fortalecer habilidades como desarrollador aplicando buenas prácticas de programación.
+**Marlon Pérez** - Software Engineering student at Universidad Manuela Beltrán. Developer in training with interest in creating practical and well-structured solutions. Focused on strengthening development skills by applying good programming practices.
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto es de uso personal. © 2025 Marlon Pérez - Todos los derechos reservados.
+This project is for personal use. © 2025 Marlon Pérez - All rights reserved.
 
+---
 
-*¿Interesado en colaborar? ¡No dudes en contactarme!*
+*Interested in collaborating? Don't hesitate to contact me!*
