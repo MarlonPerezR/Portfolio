@@ -33,10 +33,10 @@ Personal portfolio developed with HTML, CSS, and JavaScript. This website showca
 PORTFOLIO-MARLON/
 │
 ├── assets/
-│ └── Foto personal.png
+│   └── Foto personal.png
 │
 ├── css/
-│ └── styles.css
+│   └── styles.css
 │
 ├── portfolio.html
 ├── README.md
