@@ -10,11 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Technology icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <!-- Font Awesome for modal icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <button id="btnUp" title="Back to top">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="11" stroke="white" stroke-opacity="0.4" fill="none"/>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+    stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="11" stroke="white" stroke-opacity="0.4" fill="none" />
     <path d="M8 14l4-4 4 4" />
   </svg>
 </button>
@@ -40,6 +43,47 @@
     link.addEventListener("click", () => {
       document.getElementById("btnUp").classList.add("show");
     });
+  });
+
+  // Project Modal functionality - AÑADE ESTAS FUNCIONES
+  function openProjectModal(projectId) {
+    const modal = document.getElementById('projectModal');
+    modal.style.display = 'flex';
+    
+    // Personalizar enlaces según el proyecto
+    if (projectId === 'dashboard') {
+      document.getElementById('demoVideo').href = "https://youtube.com/tu-video-dashboard";
+      document.getElementById('liveDemo').href = "https://tudashboard.com";
+    } else if (projectId === 'parking') {
+      document.getElementById('demoVideo').href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
+      document.getElementById('liveDemo').href = "https://tuparkingapp.com";
+    } else if (projectId === 'project3') {
+      document.getElementById('demoVideo').href = "https://youtube.com/tu-video-project3";
+      document.getElementById('liveDemo').href = "https://tuproject3.com";
+    } else if (projectId === 'project4') {
+      document.getElementById('demoVideo').href = "https://youtube.com/tu-video-project4";
+      document.getElementById('liveDemo').href = "https://tuproject4.com";
+    }
+  }
+
+  function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    modal.style.display = 'none';
+  }
+
+  // Close modal when clicking outside
+  window.addEventListener('click', (e) => {
+    const modal = document.getElementById('projectModal');
+    if (e.target === modal) {
+      closeProjectModal();
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeProjectModal();
+    }
   });
 </script>
 
@@ -67,7 +111,8 @@
     <div class="hero-text">
       <h2>Hello, I'm <span>Marlon Pérez</span></h2>
       <p>
-        Software Engineering student with focus on web development. I like to create practical and well-structured solutions. I'm ready to learn quickly, take on new challenges, and contribute to a professional team.
+        Software Engineering student with focus on web development. I like to create practical and well-structured
+        solutions. I'm ready to learn quickly, take on new challenges, and contribute to a professional team.
       </p>
       <a href="#projects" class="btn">See my projects</a>
     </div>
@@ -77,118 +122,154 @@
   <section id="about" class="about">
     <h2>About Me</h2>
     <p>
-      I'm currently in my sixth semester of Software Engineering at Manuela Beltrán University. Since I started my studies, I discovered I really like creating web and desktop applications that solve real problems. Today, I focus on improving my skills as a developer, using good programming practices, working with APIs, and exploring code quality tools. I have experience with technologies like Java with Spring Boot, React, HTML, CSS, JavaScript, Bootstrap, PHP, and databases like MySQL and PostgreSQL. I also have basic knowledge of Python. My motivation is to continue learning and grow professionally within a development team.
+      I'm currently in my sixth semester of Software Engineering at Manuela Beltrán University. Since I started my
+      studies, I discovered I really like creating web and desktop applications that solve real problems. Today, I focus
+      on improving my skills as a developer, using good programming practices, working with APIs, and exploring code
+      quality tools. I have experience with technologies like Java with Spring Boot, React, HTML, CSS, JavaScript,
+      Bootstrap, PHP, and databases like MySQL and PostgreSQL. I also have basic knowledge of Python. My motivation is
+      to continue learning and grow professionally within a development team.
     </p>
   </section>
 
-<section id="projects" class="projects">
-  <h2>Projects</h2>
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
 
-  <div class="project-card">
-    <img src="prueba.jpg" alt="Project 2">
-    <h3>Personal Dashboard</h3>
-    <p>Dashboard in development with React, Firebase and Bootstrap. Includes login and management modules.</p>
-    <a href="#" class="btn">View project</a>
-  </div>
+    <div class="project-card">
+      <img src="prueba.jpg" alt="Project 2">
+      <h3>Personal Dashboard</h3>
+      <p>Dashboard in development with React, Firebase and Bootstrap. Includes login and management modules.</p>
+      <button class="btn" onclick="openProjectModal('dashboard')">View Project</button>
+    </div>
 
-  <div class="project-card">
-    <img src="./assets/Parking.png" alt="Project 1">
-    <h3>Parking Management System</h3>
-    <p>Web application developed with HTML, CSS, JavaScript and PHP with MySQL database.</p>
-    <a href="#" class="btn">View project</a>
-  </div>
+    <div class="project-card">
+      <img src="./assets/Parking.png" alt="Project 1">
+      <h3>Parking Management System</h3>
+      <p>Web application developed with HTML, CSS, JavaScript and PHP with MySQL database.</p>
+      <button class="btn" onclick="openProjectModal('parking')">View Project</button>
+    </div>
 
-  <div class="project-card">
-    <img src="proyecto1.jpg" alt="Project 1">
-    <h3>Parking Management System</h3>
-    <p>Web application developed with HTML, CSS, JavaScript and PHP with MySQL database.</p>
-    <a href="#" class="btn">View project</a>
-  </div>
+    <div class="project-card">
+      <img src="proyecto1.jpg" alt="Project 1">
+      <h3>Project 3</h3>
+      <p>Web application developed with modern technologies and best practices.</p>
+      <button class="btn" onclick="openProjectModal('project3')">View Project</button>
+    </div>
 
-  <div class="project-card">
-    <img src="proyecto1.jpg" alt="Project 1">
-    <h3>Parking Management System</h3>
-    <p>Web application developed with HTML, CSS, JavaScript and PHP with MySQL database.</p>
-    <a href="#" class="btn">View project</a>
-  </div>
-</section>
+    <div class="project-card">
+      <img src="proyecto1.jpg" alt="Project 1">
+      <h3>Project 4</h3>
+      <p>Another amazing project showcasing my development skills.</p>
+      <button class="btn" onclick="openProjectModal('project4')">View Project</button>
+    </div>
+  </section>
 
-<!-- Skills -->
-<section id="skills" class="skills">
-  <h2>Skills</h2>
-  <div class="skills-slider">
-    <div class="slider-track">
-      <!-- Main languages and frameworks -->
-      <i class="devicon-java-plain-wordmark colored"></i>
-      <i class="devicon-spring-plain-wordmark colored"></i>
-      <i class="devicon-react-original-wordmark colored"></i>
-      <i class="devicon-html5-plain-wordmark colored"></i>
-      <i class="devicon-css3-plain-wordmark colored"></i>
-      <i class="devicon-javascript-plain colored"></i>
-      <i class="devicon-bootstrap-plain-wordmark colored"></i>
-      <i class="devicon-php-plain colored"></i>
-      <i class="devicon-mysql-plain-wordmark colored"></i>
+  <!-- Project Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeProjectModal()"
+        onkeydown="if(event.key === 'Enter' || event.key === ' ') closeProjectModal()" aria-label="Close modal">
+        &times;
+      </button>
+      <h3>Choose how you want to explore</h3>
+      <div class="modal-options">
+        <a id="demoVideo" href="#" target="_blank" class="modal-option">
+          <div class="option-icon">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <div class="option-text">
+            <h4>Watch Demo</h4>
+            <p>See the project in action with a video explanation</p>
+          </div>
+          <i class="fas fa-arrow-right arrow-icon"></i>
+        </a>
 
-      <!-- Other main ones -->
-      <i class="devicon-python-plain-wordmark colored"></i>
-      <i class="devicon-eslint-original colored"></i>
-      <span class="custom-icon">SonarQube</span>
-
-      <!-- Duplicates for infinite loop -->
-      <i class="devicon-java-plain-wordmark colored"></i>
-      <i class="devicon-spring-plain-wordmark colored"></i>
-      <i class="devicon-react-original-wordmark colored"></i>
-      <i class="devicon-html5-plain-wordmark colored"></i>
-      <i class="devicon-css3-plain-wordmark colored"></i>
-      <i class="devicon-javascript-plain colored"></i>
-      <i class="devicon-bootstrap-plain-wordmark colored"></i>
-      <i class="devicon-php-plain colored"></i>
-      <i class="devicon-mysql-plain-wordmark colored"></i>
-      <i class="devicon-python-plain-wordmark colored"></i>
-      <i class="devicon-eslint-original colored"></i>
-      <span class="custom-icon">SonarQube</span>
+        <a id="liveDemo" href="#" target="_blank" class="modal-option">
+          <div class="option-icon">
+            <i class="fas fa-external-link-alt"></i>
+          </div>
+          <div class="option-text">
+            <h4>Try Live Demo</h4>
+            <p>Test the application yourself (if available)</p>
+          </div>
+          <i class="fas fa-arrow-right arrow-icon"></i>
+        </a>
+      </div>
     </div>
   </div>
 
- <section id="skills" class="skills-description">
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-slider">
+      <div class="slider-track">
+        <!-- Main languages and frameworks -->
+        <i class="devicon-java-plain-wordmark colored"></i>
+        <i class="devicon-spring-plain-wordmark colored"></i>
+        <i class="devicon-react-original-wordmark colored"></i>
+        <i class="devicon-html5-plain-wordmark colored"></i>
+        <i class="devicon-css3-plain-wordmark colored"></i>
+        <i class="devicon-javascript-plain colored"></i>
+        <i class="devicon-bootstrap-plain-wordmark colored"></i>
+        <i class="devicon-php-plain colored"></i>
+        <i class="devicon-mysql-plain-wordmark colored"></i>
 
-  <div class="skills-container">
-    <!-- Left block -->
-    <div class="skills-block">
-      <h3>Languages & Technologies</h3>
-      <ul>
-        <li><strong>Java & Spring Boot</strong> — solid and structured backend development</li>
-        <li><strong>React</strong> — dynamic and modern interfaces</li>
-        <li><strong>JavaScript, HTML5 & CSS3</strong> — complete web development</li>
-        <li><strong>PHP & SQL</strong> — system integration and databases</li>
-        <li><strong>Good practices</strong> with <strong>ESLint</strong> and <strong>SonarQube</strong></li>
-      </ul>
+        <!-- Other main ones -->
+        <i class="devicon-python-plain-wordmark colored"></i>
+        <i class="devicon-eslint-original colored"></i>
+        <span class="custom-icon">SonarQube</span>
+
+        <!-- Duplicates for infinite loop -->
+        <i class="devicon-java-plain-wordmark colored"></i>
+        <i class="devicon-spring-plain-wordmark colored"></i>
+        <i class="devicon-react-original-wordmark colored"></i>
+        <i class="devicon-html5-plain-wordmark colored"></i>
+        <i class="devicon-css3-plain-wordmark colored"></i>
+        <i class="devicon-javascript-plain colored"></i>
+        <i class="devicon-bootstrap-plain-wordmark colored"></i>
+        <i class="devicon-php-plain colored"></i>
+        <i class="devicon-mysql-plain-wordmark colored"></i>
+        <i class="devicon-python-plain-wordmark colored"></i>
+        <i class="devicon-eslint-original colored"></i>
+        <span class="custom-icon">SonarQube</span>
+      </div>
     </div>
 
-    <!-- Right block -->
-    <div class="skills-block">
-      <h3>Tools & Methodologies</h3>
-      <ul>
-        <li><strong>Environments:</strong> VS Code, NetBeans, XAMPP, MySQL Workbench</li>
-        <li><strong>Operating Systems:</strong> Windows, basic Linux</li>
-        <li><strong>Virtualization & Networks:</strong> VirtualBox, VMware, PNetLab</li>
-        <li><strong>Version Control:</strong> Git and GitHub</li>
-        <li><strong>Project Management:</strong> Scrum, Extreme Programming, Jira</li>
-        <li><strong>Office Software:</strong> Microsoft Office Suite</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <section class="skills-description">
+      <div class="skills-container">
+        <!-- Left block -->
+        <div class="skills-block">
+          <h3>Languages & Technologies</h3>
+          <ul>
+            <li><strong>Java & Spring Boot</strong> — solid and structured backend development</li>
+            <li><strong>React</strong> — dynamic and modern interfaces</li>
+            <li><strong>JavaScript, HTML5 & CSS3</strong> — complete web development</li>
+            <li><strong>PHP & SQL</strong> — system integration and databases</li>
+            <li><strong>Good practices</strong> with <strong>ESLint</strong> and <strong>SonarQube</strong></li>
+          </ul>
+        </div>
 
+        <!-- Right block -->
+        <div class="skills-block">
+          <h3>Tools & Methodologies</h3>
+          <ul>
+            <li><strong>Environments:</strong> VS Code, NetBeans, XAMPP, MySQL Workbench</li>
+            <li><strong>Operating Systems:</strong> Windows, basic Linux</li>
+            <li><strong>Virtualization & Networks:</strong> VirtualBox, VMware, PNetLab</li>
+            <li><strong>Version Control:</strong> Git and GitHub</li>
+            <li><strong>Project Management:</strong> Scrum, Extreme Programming, Jira</li>
+            <li><strong>Office Software:</strong> Microsoft Office Suite</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </section>
 
   <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p><strong>Interested in working with me? Write to me:</strong></p>
     <p>perezmarlon.dev@gmail.com</p>
-    <form action="mailto:perezmarlon.dev@gmail.com" method="post" enctype="text/plain"></form>
     <a href="mailto:perezmarlon.dev@gmail.com" class="btn">Send email</a>
-    
   </section>
 
   <!-- Footer -->
