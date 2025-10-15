@@ -29,19 +29,6 @@ Personal portfolio developed with HTML, CSS, and JavaScript. This website showca
 ### Other Technologies
 - **Git & GitHub** - Version control
 
-## 📁 Project Structure
-PORTFOLIO-MARLON/
-│
-├── assets/
-│   └── Foto personal.png
-│
-├── css/
-│   └── styles.css
-│
-├── portfolio.html
-├── README.md
-└── .gitignore
-
 
 ## 🚀 Portfolio Sections
 
