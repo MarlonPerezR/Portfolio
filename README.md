@@ -35,7 +35,7 @@ Personal portfolio developed with HTML, CSS, and JavaScript. This website showca
 1. **Header/Navigation** - Navigation menu with smooth links
 2. **Hero** - Personal presentation with photo and description
 3. **About Me** - Academic and professional information
-4. **Projects** - Gallery of developed projects
+4. **Projects** - Interactive project gallery with demo options
 5. **Skills** - Technology carousel and detailed skills description
 6. **Contact** - Contact information and form
 7. **Footer** - Copyright information
