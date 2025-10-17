@@ -49,7 +49,7 @@
   function openProjectModal(projectId) {
     const modal = document.getElementById('projectModal');
     modal.style.display = 'flex';
-    
+
     // Personalizar enlaces según el proyecto
     if (projectId === 'dashboard') {
       document.getElementById('demoVideo').href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
@@ -62,7 +62,7 @@
       document.getElementById('liveDemo').href = "https://tuproject3.com";
     } else if (projectId === 'project4') {
       document.getElementById('demoVideo').href = "https://youtube.com/tu-video-project4";
-      document.getElementById('liveDemo').href = "https://tuproject4.com";
+      document.getElementById('liveDemo').href = "https://rick-and-morty-react-ten-nu.vercel.app/";
     }
   }
 
@@ -156,10 +156,11 @@
     </div>
 
     <div class="project-card">
-      <img src="proyecto1.jpg" alt="Project 1">
-      <h3>Project 4</h3>
-      <p>Another amazing project showcasing my development skills.</p>
-      <button class="btn" onclick="openProjectModal('project4')">View Project</button>
+      <img src="./assets/Rick-Morty.png" alt="Rick and Morty React App">
+      <h3>Rick and Morty React App</h3>
+      <p>A React-based web app that connects to the Rick and Morty API to display characters with detailed information,
+        images, and search functionality.</p>
+      <button class="btn" onclick="openProjectModal('rickandmorty')">View Project</button>
     </div>
   </section>
 
