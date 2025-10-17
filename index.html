@@ -14,80 +14,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<button id="btnUp" title="Back to top">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
-    stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="11" stroke="white" stroke-opacity="0.4" fill="none" />
-    <path d="M8 14l4-4 4 4" />
-  </svg>
-</button>
-
-<script>
-  // Show / hide button when scrolling
-  window.addEventListener("scroll", () => {
-    const btn = document.getElementById("btnUp");
-    if (window.scrollY > 300) {
-      btn.classList.add("show");
-    } else {
-      btn.classList.remove("show");
-    }
-  });
-
-  // Smooth scroll to top
-  document.getElementById("btnUp").addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  // Show button when clicking any menu section
-  document.querySelectorAll("a[href^='#']").forEach(link => {
-    link.addEventListener("click", () => {
-      document.getElementById("btnUp").classList.add("show");
-    });
-  });
-
-  // Project Modal functionality - AÑADE ESTAS FUNCIONES
-  function openProjectModal(projectId) {
-    const modal = document.getElementById('projectModal');
-    modal.style.display = 'flex';
-
-    // Personalizar enlaces según el proyecto
-    if (projectId === 'dashboard') {
-      document.getElementById('demoVideo').href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
-      document.getElementById('liveDemo').href = "https://tudashboard.com";
-    } else if (projectId === 'parking') {
-      document.getElementById('Parking-Management-System').href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
-      document.getElementById('Parking-Management-System').href = "https://parking-management-system-production-f450.up.railway.app";
-    } else if (projectId === 'project3') {
-      document.getElementById('demoVideo').href = "https://youtube.com/tu-video-project3";
-      document.getElementById('liveDemo').href = "https://tuproject3.com";
-    } else if (projectId === 'RickandMorty') {
-      document.getElementById('demoVideo').href = "https://youtube.com/tu-video-project4";
-      document.getElementById('liveDemo').href = "https://rick-and-morty-react-ten-nu.vercel.app/";
-    }
-  }
-
-  function closeProjectModal() {
-    const modal = document.getElementById('projectModal');
-    modal.style.display = 'none';
-  }
-
-  // Close modal when clicking outside
-  window.addEventListener('click', (e) => {
-    const modal = document.getElementById('projectModal');
-    if (e.target === modal) {
-      closeProjectModal();
-    }
-  });
-
-  // Close modal with Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeProjectModal();
-    }
-  });
-</script>
-
 <body>
+  <!-- Back to Top Button -->
+  <button id="btnUp" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="11" stroke="white" stroke-opacity="0.4" fill="none" />
+      <path d="M8 14l4-4 4 4" />
+    </svg>
+  </button>
+
   <!-- Navigation -->
   <header>
     <nav>
@@ -111,7 +47,7 @@
     <div class="hero-text">
       <h2>Hello, I'm <span>Marlon Pérez</span></h2>
       <p>
-        Software Engineering student with focus on web development. I like to create practical and well-structured
+        Software Engineering student focused on web development. I enjoy creating practical and well-structured
         solutions. I'm ready to learn quickly, take on new challenges, and contribute to a professional team.
       </p>
       <a href="#projects" class="btn">See my projects</a>
@@ -131,25 +67,27 @@
     </p>
   </section>
 
+  <!-- Projects -->
   <section id="projects" class="projects">
     <h2>Projects</h2>
 
     <div class="project-card">
-      <img src="prueba.jpg" alt="Project 2">
+      <img src="prueba.jpg" alt="Project 1">
       <h3>Personal Dashboard</h3>
-      <p>Dashboard in development with React, Firebase and Bootstrap. Includes login and management modules.</p>
+      <p>Dashboard in development with React, Firebase, and Bootstrap. Includes login and management modules.</p>
       <button class="btn" onclick="openProjectModal('dashboard')">View Project</button>
     </div>
 
     <div class="project-card">
-      <img src="./assets/Parking.png" alt="Project 1">
+      <img src="./assets/Parking.png" alt="Parking Management System">
       <h3>Parking Management System</h3>
-      <p>Web application developed with HTML, CSS, JavaScript, and PHP with a MySQL database. A modern and efficient solution designed to simplify and automate vehicle parking management operations.</p>
-      <button class="btn" onclick="openProjectModal('Parking-Management-System')">View Project</button>
+      <p>Web application developed with HTML, CSS, JavaScript, and PHP with a MySQL database. A modern and efficient
+        solution designed to simplify and automate vehicle parking management operations.</p>
+      <button class="btn" onclick="openProjectModal('parking')">View Project</button>
     </div>
 
     <div class="project-card">
-      <img src="proyecto1.jpg" alt="Project 1">
+      <img src="proyecto1.jpg" alt="Project 3">
       <h3>Project 3</h3>
       <p>Web application developed with modern technologies and best practices.</p>
       <button class="btn" onclick="openProjectModal('project3')">View Project</button>
@@ -160,17 +98,14 @@
       <h3>Rick and Morty React App</h3>
       <p>A React-based web app that connects to the Rick and Morty API to display characters with detailed information,
         images, and search functionality.</p>
-      <button class="btn" onclick="openProjectModal('RickandMorty')">View Project</button>
+      <button class="btn" onclick="openProjectModal('rickandmorty')">View Project</button>
     </div>
   </section>
 
   <!-- Project Modal -->
   <div id="projectModal" class="modal">
     <div class="modal-content">
-      <button class="close-btn" onclick="closeProjectModal()"
-        onkeydown="if(event.key === 'Enter' || event.key === ' ') closeProjectModal()" aria-label="Close modal">
-        &times;
-      </button>
+      <button class="close-btn" onclick="closeProjectModal()" aria-label="Close modal">&times;</button>
       <h3>Choose how you want to explore</h3>
       <div class="modal-options">
         <a id="demoVideo" href="#" target="_blank" class="modal-option">
@@ -203,23 +138,6 @@
     <h2>Skills</h2>
     <div class="skills-slider">
       <div class="slider-track">
-        <!-- Main languages and frameworks -->
-        <i class="devicon-java-plain-wordmark colored"></i>
-        <i class="devicon-spring-plain-wordmark colored"></i>
-        <i class="devicon-react-original-wordmark colored"></i>
-        <i class="devicon-html5-plain-wordmark colored"></i>
-        <i class="devicon-css3-plain-wordmark colored"></i>
-        <i class="devicon-javascript-plain colored"></i>
-        <i class="devicon-bootstrap-plain-wordmark colored"></i>
-        <i class="devicon-php-plain colored"></i>
-        <i class="devicon-mysql-plain-wordmark colored"></i>
-
-        <!-- Other main ones -->
-        <i class="devicon-python-plain-wordmark colored"></i>
-        <i class="devicon-eslint-original colored"></i>
-        <span class="custom-icon">SonarQube</span>
-
-        <!-- Duplicates for infinite loop -->
         <i class="devicon-java-plain-wordmark colored"></i>
         <i class="devicon-spring-plain-wordmark colored"></i>
         <i class="devicon-react-original-wordmark colored"></i>
@@ -237,7 +155,6 @@
 
     <section class="skills-description">
       <div class="skills-container">
-        <!-- Left block -->
         <div class="skills-block">
           <h3>Languages & Technologies</h3>
           <ul>
@@ -249,7 +166,6 @@
           </ul>
         </div>
 
-        <!-- Right block -->
         <div class="skills-block">
           <h3>Tools & Methodologies</h3>
           <ul>
@@ -277,6 +193,56 @@
   <footer>
     <p>© 2025 Marlon Pérez - Developer in training</p>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Show / hide "Back to Top" button
+    window.addEventListener("scroll", () => {
+      const btn = document.getElementById("btnUp");
+      btn.classList.toggle("show", window.scrollY > 300);
+    });
+
+    // Smooth scroll to top
+    document.getElementById("btnUp").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Modal handling
+    function openProjectModal(projectId) {
+      const modal = document.getElementById('projectModal');
+      modal.style.display = 'flex';
+
+      const demoVideo = document.getElementById('demoVideo');
+      const liveDemo = document.getElementById('liveDemo');
+
+      if (projectId === 'dashboard') {
+        demoVideo.href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
+        liveDemo.href = "https://tudashboard.com";
+      } else if (projectId === 'parking') {
+        demoVideo.href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
+        liveDemo.href = "https://parking-management-system-production-f450.up.railway.app";
+      } else if (projectId === 'project3') {
+        demoVideo.href = "https://youtube.com/tu-video-project3";
+        liveDemo.href = "https://tuproject3.com";
+      } else if (projectId === 'rickandmorty') {
+        demoVideo.href = "https://youtube.com/tu-video-project4";
+        liveDemo.href = "https://rick-and-morty-react-ten-nu.vercel.app/";
+      }
+    }
+
+    function closeProjectModal() {
+      document.getElementById('projectModal').style.display = 'none';
+    }
+
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('projectModal');
+      if (e.target === modal) closeProjectModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeProjectModal();
+    });
+  </script>
 </body>
 
 </html>
