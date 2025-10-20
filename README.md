@@ -62,6 +62,13 @@ Personal portfolio developed with HTML, CSS, and JavaScript. This website showca
 
 **Marlon Pérez** - Software Engineering student at Universidad Manuela Beltrán. Developer in training with interest in creating practical and well-structured solutions. Focused on strengthening development skills by applying good programming practices.
 
+https://portfolio-mu-fawn-47.vercel.app/
+
+https://github.com/MarlonPerezR
+
+https://www.linkedin.com/in/marlonpérez/
+
+---
 ## 📄 License
 
 This project is for personal use. © 2025 Marlon Pérez - All rights reserved.
