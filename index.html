@@ -71,12 +71,7 @@
   <section id="projects" class="projects">
     <h2>Projects</h2>
 
-    <div class="project-card">
-      <img src="prueba.jpg" alt="Project 1">
-      <h3>Personal Dashboard</h3>
-      <p>Dashboard in development with React, Firebase, and Bootstrap. Includes login and management modules.</p>
-      <button class="btn" onclick="openProjectModal('dashboard')">View Project</button>
-    </div>
+
 
     <div class="project-card">
       <img src="./assets/Applet suite.png" alt="Applet Suite">
@@ -96,14 +91,19 @@
       <button class="btn" onclick="openProjectModal('parking')">View Project</button>
     </div>
 
-
-
     <div class="project-card">
       <img src="./assets/Rick-Morty.png" alt="Rick and Morty React App">
       <h3>Rick and Morty React App</h3>
       <p>A React-based web app that connects to the Rick and Morty API to display characters with detailed information,
         images, and search functionality.</p>
       <button class="btn" onclick="openProjectModal('rickandmorty')">View Project</button>
+    </div>
+
+    <div class="project-card">
+      <img src="prueba.jpg" alt="Project 1">
+      <h3>Personal Dashboard</h3>
+      <p>Dashboard in development with React, Firebase, and Bootstrap. Includes login and management modules.</p>
+      <button class="btn" onclick="openProjectModal('dashboard')">View Project</button>
     </div>
   </section>
 
@@ -131,6 +131,17 @@
           <div class="option-text">
             <h4>Try Project</h4>
             <p>Test the application yourself (if available)</p>
+          </div>
+          <i class="fas fa-arrow-right arrow-icon"></i>
+        </a>
+
+        <a id="githubLink" href="#" target="_blank" class="modal-option">
+          <div class="option-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="option-text">
+            <h4>View Code</h4>
+            <p>Explore the source code on GitHub</p>
           </div>
           <i class="fas fa-arrow-right arrow-icon"></i>
         </a>
@@ -219,19 +230,30 @@
 
       const demoVideo = document.getElementById('demoVideo');
       const liveDemo = document.getElementById('liveDemo');
+      const githubLink = document.getElementById('githubLink');
+
+      // Reset all options to visible
+      demoVideo.style.display = 'flex';
+      liveDemo.style.display = 'flex';
+      githubLink.style.display = 'flex';
 
       if (projectId === 'dashboard') {
         demoVideo.href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
-        liveDemo.href = "https://tudashboard.com";
+        // Hide the "Try Project" option for dashboard
+        liveDemo.style.display = 'none';
+        githubLink.href = "https://github.com/yourusername/personal-dashboard";
       } else if (projectId === 'parking') {
         demoVideo.href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
         liveDemo.href = "https://parking-management-system-production-f450.up.railway.app";
+        githubLink.href = "https://github.com/yourusername/parking-management";
       } else if (projectId === 'AppletSuite') {
         demoVideo.href = "https://youtube.com/tu-video-project3";
         liveDemo.href = "https://applet-suite-frontend.vercel.app/";
+        githubLink.href = "https://github.com/yourusername/applet-suite";
       } else if (projectId === 'rickandmorty') {
         demoVideo.href = "https://youtube.com/tu-video-project4";
         liveDemo.href = "https://rick-and-morty-react-ten-nu.vercel.app/";
+        githubLink.href = "https://github.com/yourusername/rick-and-morty-app";
       }
     }
 
