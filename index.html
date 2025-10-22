@@ -76,33 +76,42 @@
     <div class="project-card">
       <img src="./assets/Applet suite.png" alt="Applet Suite">
       <h3>Applet Suite</h3>
-      <p>Applet Suite is a full web application built with React and Spring Boot. It includes several small, useful
-        tools like a movies browser,
-        weather viewer, chatbot with AI, and more — all working together through a secure and fast REST API, with a
-        clean and easy-to-use design.</p>
+      <p>🔹 Full web application built with React (frontend) and Spring Boot (backend).</p>
+      <p>🔹 Secure and efficient RESTful API communication.</p>
+      <p>🔹 Deployed on Vercel (frontend) and Render (backend).</p>
+      <p>🔹 Integrates 4 external APIs for movies, weather, AI chatbot, and more.</p>
+      <p>🔹 Clean, fast, and user-friendly design.</p>
       <button class="btn" onclick="openProjectModal('AppletSuite')">View Project</button>
     </div>
 
     <div class="project-card">
       <img src="./assets/Parking.png" alt="Parking Management System">
       <h3>Parking Management System</h3>
-      <p>Web application developed with HTML, CSS, JavaScript, and PHP with a MySQL database. A modern and efficient
-        solution designed to simplify and automate vehicle parking management operations.</p>
+      <p>🔹 Web application built with HTML, CSS, JavaScript, and PHP with a MySQL database.</p>
+      <p>🔹 Deployed on Railway (frontend, backend, and database).</p>
+      <p>🔹 Designed for efficient vehicle parking management automation.</p>
+      <p>🔹 Focused on user experience and usability.</p>
       <button class="btn" onclick="openProjectModal('parking')">View Project</button>
     </div>
 
     <div class="project-card">
       <img src="./assets/Rick-Morty.png" alt="Rick and Morty React App">
       <h3>Rick and Morty React App</h3>
-      <p>A React-based web app that connects to the Rick and Morty API to display characters with detailed information,
-        images, and search functionality.</p>
+      <p>🔹 Web application developed with React.</p>
+      <p>🔹 Connects to the Rick and Morty API to display characters with detailed info and images.</p>
+      <p>🔹 Includes dynamic search and filtering features.</p>
+      <p>🔹 Deployed on Vercel with a focus on speed and usability.</p>
       <button class="btn" onclick="openProjectModal('rickandmorty')">View Project</button>
     </div>
 
     <div class="project-card">
-      <img src="prueba.jpg" alt="Project 1">
-      <h3>Personal Dashboard</h3>
-      <p>Dashboard in development with React, Firebase, and Bootstrap. Includes login and management modules.</p>
+      <img src="./assets/Dashboard.png" alt="Rescue Pets Dashboard">
+      <h3>Rescue Pets Dashboard</h3>
+      <p>🔹 Web dashboard developed with React (frontend) and Spring Boot (backend).</p>
+      <p>🔹 Built with a microservices architecture — 5 services: Authentication, Pets, Shelters, Volunteers, and
+        Reports (analytics & statistics).</p>
+      <p>🔹 Currently in development — Authentication microservice completed.</p>
+      <p>🔹 Upcoming deployment phase.</p>
       <button class="btn" onclick="openProjectModal('dashboard')">View Project</button>
     </div>
   </section>
@@ -228,7 +237,7 @@
       const modal = document.getElementById('projectModal');
       modal.style.display = 'flex';
 
-      
+
       const liveDemo = document.getElementById('liveDemo');
       const githubLink = document.getElementById('githubLink');
       const demoVideo = document.getElementById('demoVideo');
@@ -240,7 +249,7 @@
 
       if (projectId === 'dashboard') {
         demoVideo.href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
-  
+
         liveDemo.style.display = 'none';
         githubLink.href = "https://github.com/yourusername/personal-dashboard";
       } else if (projectId === 'parking') {
@@ -248,7 +257,7 @@
         liveDemo.href = "https://parking-management-system-production-f450.up.railway.app";
         githubLink.href = "https://github.com/MarlonPerezR/Parking-Management-System";
       } else if (projectId === 'AppletSuite') {
-        
+
         liveDemo.href = "https://applet-suite-frontend.vercel.app/";
         githubLink.href = "https://github.com/MarlonPerezR/Applet-suite-Frontend";
         demoVideo.href = "https://youtube.com/tu-video-project3";
