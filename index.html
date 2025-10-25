@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <!-- Font Awesome for modal icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
 <body>
@@ -92,6 +94,16 @@
       <p>🔹 Designed for efficient vehicle parking management automation.</p>
       <p>🔹 Focused on user experience and usability.</p>
       <button class="btn" onclick="openProjectModal('parking')">View Project</button>
+    </div>
+
+    <div class="project-card">
+      <img src="./assets/Task manager.png" alt="Task Manager Pro">
+      <h3>Task Manager Pro</h3>
+      <p>🔹 Modern web application built with React.js and Spring Boot.</p>
+      <p>🔹 Full-stack deployment on Render (backend) and Vercel (frontend).</p>
+      <p>🔹 Comprehensive task management with calendar view and real-time updates.</p>
+      <p>🔹 Focused on productivity and intuitive user experience.</p>
+      <button class="btn" onclick="openProjectModal('Task')">View Project</button>
     </div>
 
     <div class="project-card">
@@ -248,24 +260,34 @@
       githubLink.style.display = 'flex';
 
       if (projectId === 'dashboard') {
-        demoVideo.href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
 
+        demoVideo.href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
         liveDemo.style.display = 'none';
         githubLink.href = "https://github.com/yourusername/personal-dashboard";
+
       } else if (projectId === 'parking') {
+
         demoVideo.href = "https://www.youtube.com/watch?v=LJKE271m0H8&t=1s";
         liveDemo.href = "https://parking-management-system-production-f450.up.railway.app";
         githubLink.href = "https://github.com/MarlonPerezR/Parking-Management-System";
+
       } else if (projectId === 'AppletSuite') {
 
         liveDemo.href = "https://applet-suite-frontend.vercel.app/";
         githubLink.href = "https://github.com/MarlonPerezR/Applet-suite-Frontend";
         demoVideo.href = "https://youtube.com/tu-video-project3";
+
       } else if (projectId === 'rickandmorty') {
         demoVideo.style.display = 'none';
         liveDemo.href = "https://rick-and-morty-react-ten-nu.vercel.app/";
         githubLink.href = "https://github.com/MarlonPerezR/Rick-and-Morty-React";
+
+      } else if (projectId === 'Task') {
+        demoVideo.style.display = 'https://youtube.com/tu-video-project3';
+        liveDemo.href = "https://task-project-frontend-fawn.vercel.app/";
+        githubLink.href = "https://github.com/MarlonPerezR/task-project-frontend";
       }
+      
     }
 
     function closeProjectModal() {
