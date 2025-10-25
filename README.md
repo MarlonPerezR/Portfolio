@@ -6,7 +6,7 @@
 
 Personal portfolio developed with HTML, CSS, and JavaScript. This website showcases my skills, projects, and experience as a developer in training.
 
-## ✨ Features
+## Features
 
 - **Responsive design** - Adapts to different devices
 - **Smooth navigation** - Smooth scrolling between sections
@@ -40,7 +40,7 @@ Personal portfolio developed with HTML, CSS, and JavaScript. This website showca
 6. **Contact** - Contact information and form
 7. **Footer** - Copyright information
 
-## 🎯 Main Features
+## Main Features
 
 ### Navigation
 - Responsive menu with links to all sections
@@ -62,11 +62,11 @@ Personal portfolio developed with HTML, CSS, and JavaScript. This website showca
 
 **Marlon Pérez** - Software Engineering student at Universidad Manuela Beltrán. Developer in training with interest in creating practical and well-structured solutions. Focused on strengthening development skills by applying good programming practices.
 
-https://portfolio-mu-fawn-47.vercel.app/
+🌐 Portfolio: https://portfolio-mu-fawn-47.vercel.app/
 
-https://github.com/MarlonPerezR
+💻 GitHub: https://github.com/MarlonPerezR
 
-https://www.linkedin.com/in/marlonpérez/
+💼 LinkedIn: https://www.linkedin.com/in/marlonpérez/
 
 ---
 ## 📄 License
