@@ -74,49 +74,53 @@
     <h2>Projects</h2>
 
 
-
-    <div class="project-card">
-      <img src="./assets/Applet suite.png" alt="Applet Suite">
-      <h3>Applet Suite</h3>
-      <p>🔹 Full web application built with React (frontend) and Spring Boot (backend).</p>
-      <p>🔹 Secure and efficient RESTful API communication.</p>
-      <p>🔹 Deployed on Vercel (frontend) and Render (backend).</p>
-      <p>🔹 Integrates 4 external APIs for movies, weather, AI chatbot, and more.</p>
-      <p>🔹 Clean, fast, and user-friendly design.</p>
-      <button class="btn" onclick="openProjectModal('AppletSuite')">View Project</button>
+    <div class="project-card" onclick="openProjectModal('AppletSuite')">
+      <div class="card-content">
+        <img src="./assets/Applet suite.png" alt="Applet Suite">
+        <h3>Applet Suite</h3>
+        <p>🔹 Full web application built with React (frontend) and Spring Boot (backend).</p>
+        <p>🔹 Secure and efficient RESTful API communication.</p>
+        <p>🔹 Deployed on Vercel (frontend) and Render (backend).</p>
+        <p>🔹 Integrates 4 external APIs for movies, weather, AI chatbot, and more.</p>
+        <p>🔹 Clean, fast, and user-friendly design.</p>
+      </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" onclick="openProjectModal('parking')">
+      <div class="card-content">
       <img src="./assets/Parking.png" alt="Parking Management System">
       <h3>Parking Management System</h3>
       <p>🔹 Web application built with HTML, CSS, JavaScript, and PHP with a MySQL database.</p>
       <p>🔹 Deployed on Railway (frontend, backend, and database).</p>
       <p>🔹 Designed for efficient vehicle parking management automation.</p>
       <p>🔹 Focused on user experience and usability.</p>
-      <button class="btn" onclick="openProjectModal('parking')">View Project</button>
+      </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" onclick="openProjectModal('Task')">
+      <div class="card-content">
       <img src="./assets/Task manager.png" alt="Task Manager Pro">
       <h3>Task Manager Pro</h3>
       <p>🔹 Modern web application built with React.js and Spring Boot.</p>
       <p>🔹 Full-stack deployment on Render (backend) and Vercel (frontend).</p>
       <p>🔹 Comprehensive task management with calendar view and real-time updates.</p>
       <p>🔹 Focused on productivity and intuitive user experience.</p>
-      <button class="btn" onclick="openProjectModal('Task')">View Project</button>
+      </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" onclick="openProjectModal('rickandmorty')">
+      <div class="card-content">
       <img src="./assets/Rick-Morty.png" alt="Rick and Morty React App">
       <h3>Rick and Morty React App</h3>
       <p>🔹 Web application developed with React.</p>
       <p>🔹 Connects to the Rick and Morty API to display characters with detailed info and images.</p>
       <p>🔹 Includes dynamic search and filtering features.</p>
       <p>🔹 Deployed on Vercel with a focus on speed and usability.</p>
-      <button class="btn" onclick="openProjectModal('rickandmorty')">View Project</button>
+      </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" onclick="openProjectModal('dashboard')">
+      <div class="card-content">
       <img src="./assets/Dashboard.png" alt="Rescue Pets Dashboard">
       <h3>Rescue Pets Dashboard</h3>
       <p>🔹 Web dashboard developed with React (frontend) and Spring Boot (backend).</p>
@@ -124,7 +128,7 @@
         Reports (analytics & statistics).</p>
       <p>🔹 Currently in development — Authentication microservice completed.</p>
       <p>🔹 Upcoming deployment phase.</p>
-      <button class="btn" onclick="openProjectModal('dashboard')">View Project</button>
+      </div>
     </div>
   </section>
 
@@ -287,7 +291,7 @@
         liveDemo.href = "https://task-project-frontend-fawn.vercel.app/";
         githubLink.href = "https://github.com/MarlonPerezR/task-project-frontend";
       }
-      
+
     }
 
     function closeProjectModal() {

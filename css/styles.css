@@ -400,6 +400,7 @@ section h2,
   justify-content: center;
   padding-top: 20px;
   position: relative;
+  gap: 90px;
 }
 
 .projects h2 {
@@ -412,30 +413,106 @@ section h2,
 
 .project-card {
   background: #1a1a1a;
-  margin: 50px;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 0;
+  border-radius: 15px;
   max-width: 500px;
   text-align: left;
-  transition: transform 0.3s, box-shadow 0.3s;
-  
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 6px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00aaff, #0088cc);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
 }
 
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 15px #00aaff66;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 15px 30px rgba(0, 170, 255, 0.3),
+    0 10px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 170, 255, 0.3);
+  animation: subtle-pulse 2s infinite;
+}
+
+.card-content {
+  padding: 25px;
 }
 
 .project-card img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.03);
 }
 
 .project-card h3 {
   color: #00aaff;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
+
+.project-card:hover h3 {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 170, 255, 0.7);
+}
+
+.project-card p {
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover p {
+  color: #e0e0e0;
+}
+
+.project-card::after {
+  content: 'Click to view details';
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 0.8rem;
+  color: #00aaff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+/* Efecto de pulso sutil al hacer hover */
+@keyframes subtle-pulse {
+  0% { box-shadow: 0 15px 30px rgba(0, 170, 255, 0.3); }
+  50% { box-shadow: 0 15px 35px rgba(0, 170, 255, 0.5); }
+  100% { box-shadow: 0 15px 30px rgba(0, 170, 255, 0.3); }
+}
+
+
 
 .project-card .btn {
   margin-top: 20px; /* separa el botón del texto */
@@ -463,6 +540,48 @@ footer {
 /* -----------------------------------
    RESPONSIVO
 ----------------------------------- */
+@media (max-width: 1024px) {
+  .projects {
+    gap: 25px;
+  }
+  
+  .project-card {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .project-card {
+    max-width: 100%;
+    margin: 0 15px;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    margin: 0 10px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .project-card::after {
+    bottom: 10px;
+    right: 15px;
+    font-size: 0.7rem;
+  }
+}
 
 /* Tablets y pantallas medianas */
 @media (max-width: 1024px) {
