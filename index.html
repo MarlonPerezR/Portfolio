@@ -233,25 +233,23 @@
     <a href="mailto:perezmarlon.dev@gmail.com" class="btn">Send email</a>
   </section>
 
-  <!-- Footer -->
+
   <footer>
     <p>© 2025 Marlon Pérez - Developer in training</p>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Show / hide "Back to Top" button
+
     window.addEventListener("scroll", () => {
       const btn = document.getElementById("btnUp");
       btn.classList.toggle("show", window.scrollY > 300);
     });
 
-    // Smooth scroll to top
     document.getElementById("btnUp").addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // Modal handling
+
     function openProjectModal(projectId) {
       const modal = document.getElementById('projectModal');
       modal.style.display = 'flex';
@@ -261,7 +259,7 @@
       const githubLink = document.getElementById('githubLink');
       const demoVideo = document.getElementById('demoVideo');
 
-      // Reset all options to visible
+
       demoVideo.style.display = 'flex';
       liveDemo.style.display = 'flex';
       githubLink.style.display = 'flex';
